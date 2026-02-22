@@ -3,7 +3,7 @@ namespace fleettrackapi.dtos
     public record TrackingEventDto
     {
         public string TripId { get; init; } = default!;
-        public DateTime TimestampUtc { get; init; }
+        public DateTimeOffset TimestampUtc { get; init; }
 
         public double Latitude { get; init; }
         public double Longitude { get; init; }

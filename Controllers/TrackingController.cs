@@ -29,7 +29,7 @@ namespace fleettrackapi.controllers
             var entities = request.Events.Select(e => new TrackingEvent
             {
                 TripId = Guid.Parse(request.TripId),
-                TimestampUtc = e.TimestampUtc,
+                TimestampUtc = e.TimestampUtc.DateTime,
                 Latitude = e.Latitude,
                 Longitude = e.Longitude,
                 Accuracy = e.Accuracy,
